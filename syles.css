@@ -62,13 +62,18 @@ img {
   text-align: center;
 }
 
-/* MENU BAR — original red */
+/* -------------------------------------------------- */
+/* MENU BAR — NOW RESPONSIVE BUT LOOKS THE SAME       */
+/* -------------------------------------------------- */
+
 .menu-bar {
   background-color: rgb(186, 0, 0);
-  height: 1cm;
+  height: auto;                 /* allows shrinking */
+  padding: 10px 20px;           /* keeps spacing consistent */
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  justify-content: center;      /* stays centered */
+  flex-wrap: wrap;              /* NEW: allows wrapping on small screens */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -79,6 +84,7 @@ img {
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;              /* NEW: allows menu items to wrap */
 }
 
 .menu-bar a {
@@ -94,7 +100,10 @@ img {
   border-radius: 5px;
 }
 
-/* HOME PAGE TEXT + IMAGE BLOCK */
+/* -------------------------------------------------- */
+/* HOME PAGE TEXT + IMAGE BLOCK                       */
+/* -------------------------------------------------- */
+
 .image-text-section {
   width: 600px;
   margin: 0 auto;
@@ -105,21 +114,29 @@ img {
   margin-top: 50px;
 }
 
-/* YOUTUBE EMBED — original size + left aligned */
+/* -------------------------------------------------- */
+/* YOUTUBE EMBED — NOW RESPONSIVE                     */
+/* -------------------------------------------------- */
+
 .video-wrapper {
-  width: 560px;
-  height: 315px;
+  width: 560px;          /* original desktop width */
+  height: 315px;         /* original desktop height */
+  max-width: 100%;       /* NEW: shrink on phones */
+  aspect-ratio: 16 / 9;  /* NEW: keeps proportions */
   margin-left: 0;
   margin-right: auto;
 }
 
 .video-wrapper iframe {
-  width: 560px;
-  height: 315px;
+  width: 100%;           /* NEW: responsive */
+  height: 100%;          /* NEW: responsive */
   border: none;
 }
 
-/* CONTACT PAGE */
+/* -------------------------------------------------- */
+/* CONTACT PAGE                                       */
+/* -------------------------------------------------- */
+
 .contact-section {
   text-align: center;
 }
