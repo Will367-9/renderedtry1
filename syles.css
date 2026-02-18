@@ -11,22 +11,63 @@ p {
 
 body {
   background-color: rgb(9, 8, 8);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
 }
 
+/* ORIGINAL FIXED IMAGE SIZE (desktop) */
 img {
   height: 350px;
   width: 600px;
+}
+
+/* -------------------------------------------------- */
+/* MAKE ALL CENTERED IMAGES FIT ON ANY DEVICE         */
+/* -------------------------------------------------- */
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------------------------------------------------- */
+/* MAKE THE YOUTUBE LINK FIT + STAY CENTERED          */
+/* -------------------------------------------------- */
+
+.youtube-link {
+  text-align: center;
+}
+
+.youtube-link a {
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+/* -------------------------------------------------- */
+/* RIGHT-FLOATING IMAGE (Will Woodward.JPG)           */
+/* NOW ALSO SHRINKS ON SMALL SCREENS                  */
+/* -------------------------------------------------- */
+
+.image-text-section img {
+  float: right;
+  width: 180px;        /* original desktop size */
+  height: auto;
+  margin-left: 15px;
+  max-width: 100%;     /* NEW: allows shrinking on phones */
 }
 
 .image-container {
   text-align: center;
 }
 
+/* MENU BAR — original red */
 .menu-bar {
   background-color: rgb(186, 0, 0);
   height: 1cm;
   display: flex;
-  align-items: center;  /* vertical centering */
+  align-items: center;
   padding: 0 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -36,13 +77,13 @@ img {
   margin: 0 auto;
   padding: 0;
   display: flex;
-  justify-content: center;  /* horizontal centering */
+  justify-content: center;
   gap: 30px;
 }
 
 .menu-bar a {
   text-decoration: none;
-  color: rgb(255, 255, 255);;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 16px;
   padding: 5px 10px;
@@ -53,23 +94,37 @@ img {
   border-radius: 5px;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
+/* HOME PAGE TEXT + IMAGE BLOCK */
 .image-text-section {
-  width: 600px;          /* prevents image from flying to page edge */
-  margin: 0 auto;        /* centers the whole block on the page */
-  overflow: hidden;      /* clears the float cleanly */
-}
-
-.image-text-section img {
-  float: right;
-  width: 180px;          /* controlled image size */
-  height: auto;
-  margin-left: 15px;     /* space between text and image */
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .image-text-section .side-text {
-  margin-top: 50px;      /* <-- vertical adjustment (ONLY text moves) */
+  margin-top: 50px;
+}
+
+/* YOUTUBE EMBED — original size + left aligned */
+.video-wrapper {
+  width: 560px;
+  height: 315px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.video-wrapper iframe {
+  width: 560px;
+  height: 315px;
+  border: none;
+}
+
+/* CONTACT PAGE */
+.contact-section {
+  text-align: center;
+}
+
+.email {
+  color: white;
+  font-weight: bold;
 }
